@@ -12,7 +12,9 @@ export async function POST(req: Request) {
   const proxyUrl = process.env.PROXY_URL ?? 'http://47.239.123.43:4000/proxy';
 
   try {
-    console.log("🔥 使用的 proxyUrl 是：", process.env.PROXY_URL);
+    //
+    //console.log("🔥 使用的 proxyUrl 是：", process.env.PROXY_URL);
+    console.log("🔥 使用的 proxyUrl 是：", proxyUrl); // 而不是 process.env.PROXY_URL
     console.log('📝 发送到 Proxy 的 Prompt：', prompt);
     const response = await fetch(proxyUrl, {
       method: 'POST',
